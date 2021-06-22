@@ -7,6 +7,7 @@
 チームオーナーにコンタクトを取って、Gitアカウントに登録したemailアドレスを伝えてください
 
 チームへの招待状がemailで届きます
+
 <img src="../image/git/joinOrg.png" width="420">
 
 文中の"Join @adachi-printing"をクリックしてください

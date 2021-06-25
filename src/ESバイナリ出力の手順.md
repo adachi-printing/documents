@@ -6,6 +6,10 @@ ExtendScriptはJavascriptの状態から暗号化されたバイナリ形式へ�
 
 バイナリ変換によって、スクリプトファイルのサイズが小さくなるほか、暗号化されるためソースコードの解読が困難になります
 
+バイナリ出力されたファイルは拡張子が.jsxbinになります
+
+一部のAdobeアプリでは.jsxbinをスクリプトファイルとして認識しないので、拡張子を.jsxに手動で変更する必要があります
+
 ## Usage / 手順
 
 ### Adobe ExtendScript Toolkitを使用する
@@ -26,3 +30,26 @@ VS Codeの拡張パネルからExtendScript Debuggerのプラグインをイン�
 
 VS Codeで目的のスクリプトファイルを読み込んだのち、右クリックメニューから”バイナリとして書き出し”で出力
 
+## ソースコードとバイナリ出力の比較
+
+ソースコード
+```javascript
+/******/ (function() { // webpackBootstrap
+/******/ 	var __webpack_modules__ = ({
+
+/***/ "./node_modules/extendscript-es5-shim-ts/index.js":
+/*!********************************************************!*\
+  !*** ./node_modules/extendscript-es5-shim-ts/index.js ***!
+  \********************************************************/
+/***/ (function() {
+```
+改行やスペースなどがきちんと行われており、読むことができる
+
+バイナリ化
+```
+@JSXBIN@ES@2.0@MyBbyBn0ABJ2lJGnAENyBnAMAbyBnABM2kOGbyBn0AFJ2kQGnASzMjDjBjDjIjFjE
+iNjPjEjVjMjFBAQzACfjzYififjXjFjCjQjBjDjLifjNjPjEjVjMjFifjDjBjDjIjFififDfVzIjNjP
+jEjVjMjFiJjEEfCnftO2kRGby2kSGn0ABZ2kSGnAXzHjFjYjQjPjSjUjTFfVBf0ACzDhBhdhdGVBfAj
+zJjVjOjEjFjGjJjOjFjEHfnnnJ2kVGnASzGjNjPjEjVjMjFIBBQCfjDfVEfCWzGiPjCjKjFjDjUJBFW
+```
+改行やスペースが削除され、文字も変換されて人が読むことができない

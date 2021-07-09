@@ -18,3 +18,5 @@
 ## Visual Studio Codeについて
 
 1. [VSCodeのインストールと設定](src/VSCodeのインストールと設定.md)
+
+2. [リポジトリのクローン](src/リポジトリのクローン.md)

@@ -15,7 +15,7 @@
 
 デフォルトでは英語表記なので、日本語化のライブラリをインストールした上で、設定を変更してください
 
-<img src="../image/git/vsCodeJpn.png" width="240">
+<img src="../image/vscode/vsCodeJpn.png" width="240">
 
 1. 左のブロックのようなアイコンをクリックします
 
